@@ -1,32 +1,28 @@
 # CCPD Character Recognition
 
-License plate character recognition pipeline using the Chinese City Parking Dataset (CCPD). Achieves 81.47% accuracy on alphanumeric classification without deep learning.
+Pipeline de reconnaissance de caractères de plaques d'immatriculation sur le dataset CCPD, sans deep learning.
 
-## Overview
+## Présentation
 
-Implements a profile-matching approach: distance-to-edge feature extraction combined with K-means clustering for template learning. Characters (0-9, A-Z) are classified using Euclidean distance to cluster centroids with softmax probability conversion.
+Approche par correspondance de profils : extraction de primitives basées sur la distance aux bords (gauche/droite), apprentissage par centroïdes K-means comme templates de classe, classification par distance euclidienne avec conversion softmax.
 
-## Results
+## Résultats
 
-- Dataset: CCPD (Chinese Province City District license plates)
-- Test set: ~475 images
-- Accuracy: **81.47%** on alphanumeric characters (0-9, A-Z)
+- Jeu de données : CCPD (Chinese City Parking Dataset)
+- Jeu de test : ~475 images
+- Précision : **81,47%** sur les caractères alphanumériques (0-9, A-Z)
 
-## Tech Stack
+## Stack technique
 
-- Python
-- OpenCV
-- NumPy
-- scikit-learn (K-means, confusion matrix)
-- Matplotlib
+- Python, OpenCV, NumPy, scikit-learn (K-means)
 
-## Setup
+## Installation
 
 ```bash
 pip install opencv-python numpy scikit-learn matplotlib
 jupyter notebook
 ```
 
-## Dataset
+## Données
 
-The CCPD dataset is not included. Download it separately and place it in `data/`.
+Le dataset CCPD n'est pas inclus. À télécharger séparément et à placer dans `data/`.
